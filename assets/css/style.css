@@ -1,0 +1,43 @@
+*
+    {
+      font-family: "montserrat",sans-serif;
+    }
+
+    .container
+    {
+      position: relative;
+      display: inline-block;
+    }
+
+    .text
+    {
+      font-size: 60px;
+      font-weight: 900;
+      position: relative;
+      color: #b6c2ce; 
+    }
+
+    .text::before
+    {
+      color: #fff;
+      width: 0;
+      overflow: hidden;
+      transition: 0.6s;
+    }
+
+    .container::before
+    {
+      content: "";
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      background: #1e3b4e;
+      right: 0;
+      top: 0;
+      transition: 0.6s;
+    }
+
+    .container:hover .text::before,.container:hover::before
+    {
+      width: 100%;
+    }
